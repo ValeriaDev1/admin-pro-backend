@@ -14,8 +14,11 @@ app.use(express.json());
 dbConnection();
 // Rutas 
 
-app.use('/api/usuarios', require('./routes/usuarios'));
+app.use('/api/users', require('./routes/usuarios'));
 app.use('/api/login', require('./routes/auth'));
+app.use('/api/hospitals', require('./routes/hospital'));
+app.use('/api/doctors', require('./routes/doctor'));
+
 
 
 app.listen(process.env.PORT, () => {
